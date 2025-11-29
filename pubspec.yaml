@@ -1,0 +1,71 @@
+name: farmvision_ai
+description: "FarmVision AI - Crop Disease Detection"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # ML MODEL for Crop Disease Detection
+  tflite_flutter: ^0.12.1
+  image_picker: ^1.2.1
+  image: ^4.5.4
+
+  # STORAGE
+  shared_preferences: ^2.2.2
+
+  # NETWORK CHECK
+  connectivity_plus: ^6.0.3
+  internet_connection_checker: ^1.0.0+1
+
+  # TRANSLATION + VOICE
+  google_mlkit_translation: ^0.10.0
+  flutter_tts: ^3.8.0
+
+  # SPEECH (GitHub version for Android fix)
+  speech_to_text:
+    git:
+      url: https://github.com/csdcorp/speech_to_text.git
+      path: speech_to_text
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_native_splash: ^2.4.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    # Splash screen
+    - assets/splash/logo.png
+
+    # ML model + labels (CORRECT PATH)
+    - assets/model/crop_model.tflite
+    - assets/model/labels.txt
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Medium.ttf
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/splash/logo.png
+  android_gravity: center
+  ios_content_mode: scaleAspectFit
+
+  android_12:
+    image: assets/splash/logo.png
+    color: "#FFFFFF"

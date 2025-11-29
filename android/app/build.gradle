@@ -1,0 +1,41 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'dev.flutter.flutter-gradle-plugin'
+}
+
+android {
+    namespace "com.example.farmvision_ai"
+    compileSdk flutter.compileSdkVersion
+     ndkVersion "28.2.13676358"
+
+    defaultConfig {
+        applicationId "com.example.farmvision_ai"
+        minSdk flutter.minSdkVersion
+        targetSdk flutter.targetSdkVersion
+        versionCode flutter.versionCode
+        versionName flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+            // shrinkResources true
+            // minifyEnabled true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+        languageVersion = "2.1"   // ✔ matches Kotlin 2.0.20
+    }
+}
+
+flutter {
+    source = "../.."
+}
