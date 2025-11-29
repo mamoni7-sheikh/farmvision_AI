@@ -45,8 +45,7 @@ It uses a quantized TFLite model to classify 38 plant diseases and works fully o
 
 # Download APK:
 
-# Project Structure
-
+FarmVision_AI – Project Workflow & Structure
 FarmVision_AI/
 │
 ├── lib/
@@ -60,14 +59,14 @@ FarmVision_AI/
 │   │   └── history.dart
 │   │
 │   ├── ml/
-│       ├── ml_service.dart
-│       ├── image_preprocessor.dart
-│       ├── labels_loader.dart
-│       └── history_service.dart        
+│   │   ├── ml_service.dart
+│   │   ├── image_preprocessor.dart
+│   │   ├── labels_loader.dart
+│   │   └── history_service.dart
 │
 ├── assets/
 │   ├── splash/
-│   │   └── logo.png                    
+│   │   └── logo.png
 │   │
 │   ├── fonts/
 │   │   ├── Poppins-Regular.ttf
