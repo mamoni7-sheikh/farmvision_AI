@@ -43,7 +43,6 @@ It uses a quantized TFLite model to classify 38 plant diseases and works fully o
 
   5. The final model was optimized and converted to TFLite (int8) for fast, offline inference inside the Flutter app.
 
-# Download APK:
 
 FarmVision_AI – Project Workflow & Structure
 FarmVision_AI/
